@@ -1,0 +1,25 @@
+開発ツール
+
+○VCS
+・Github
+
+○課題管理
+・Githubのissue
+
+○コミュニケーション
+・Slack
+・Skype
+・Discord
+
+○テキストエディター
+・VisualStudioCode
+
+○IDE
+Intellij IDEA
+
+○ビルドツール
+Gradle
+
+○参考
+https://qiita.com/mabubu0203/items/d896cbb4948077011dc9
+
