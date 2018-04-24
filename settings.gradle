@@ -1,0 +1,8 @@
+rootProject.name = 'BookManager'
+include(
+        'micro-api',
+        'micro-interfaces',
+        'micro-test',
+        'micro-validator'
+)
+
