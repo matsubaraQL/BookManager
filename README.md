@@ -28,6 +28,7 @@ BookManager                           … rootプロジェクト
 - - postgres                          … 
 - - sonarqube                         … 
 - - docker-compose.yaml               … dockerコンテナ起動ファイル
+- document                            … 各種ドキュメント格納フォルダ
 - gradle                              … 
 - micro-api                           … RestApiプロジェクト
 - micro-interfaces                    … RestApiのI/Oを定義したプロジェクト
@@ -49,7 +50,7 @@ BookManager                           … rootプロジェクト
 
 | name              | version
 | :---------------- | :-------
-| OpenJdk           | 1.9
+| OpenJdk           | 10
 | DockerCompose     | 1.20
 | Gradle            | 4.7 
 | SonarQube         | 7.x
