@@ -1,24 +1,32 @@
-開発ツール
-
-○VCS
+アカウント
 ・Github
-
-○課題管理
-・Githubのissue
-
-○コミュニケーション
+・Qiita
 ・Slack
 ・Skype
 ・Discord
 
-○テキストエディター
+開発ツール(SP用)
+○アプリ
+・Slack
+・Skype
+・Discord
+
+開発ツール(PC(Mac)用)
+○公式アプリ
+・X-Code
+
+○アプリ
+・Slack
+・Skype
+・Discord
 ・VisualStudioCode
+・Intellij IDEA
+・HomeBrew
+・Docker For Mac
 
-○IDE
-Intellij IDEA
-
-○ビルドツール
-Gradle
+○アプリ以外
+・Gradle
+・OpenJdk
 
 ○参考
 https://qiita.com/mabubu0203/items/d896cbb4948077011dc9
