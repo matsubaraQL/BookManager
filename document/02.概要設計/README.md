@@ -31,7 +31,7 @@ Macでのスクショ方法は「shift + command + 4」です。
 
 ### クライアント<->サーバー
 
-![overview image](https://github.com/mabubu0203/BookManager/blob/master/document/02.概要設計/image/01.png?raw=true)
+![overview image](./image/01.png?raw=true)
 
 ```mermaid
 sequenceDiagram
@@ -49,23 +49,27 @@ sequenceDiagram
 
 ### 画面遷移図
 
-![overview image](https://github.com/mabubu0203/BookManager/blob/master/document/02.概要設計/image/02.png?raw=true)
+![overview image](./image/02.png?raw=true)
 
 ```mermaid
 graph TD
-	A[メニューリンク] -.-> B(検索画面)
-	B -->|検索| B
-	B -->|1件取得| C(詳細画面)
-	C --> D(編集画面)
-	D --> E(編集確認画面)
-	E -->|更新| F(編集完了画面)
-	E -->|削除| F
+	A[メニューリンク] -.-> B(書籍一覧画面)
+	B -->|書籍一覧取得| B
+	B -->|書籍1件取得| C(書籍詳細画面)
+	C --> D(書籍編集画面)
+	D --> E(書籍編集確認画面)
+	E -->|書籍更新| F(書籍編集完了画面)
+	E -->|書籍削除| F
 	F --> B
-	A -.-> H(登録申請画面)
-	H --> I(登録申請確認画面)
-	I -->|登録申請| J(登録申請完了画面)
-	A -.-> M(申請許可確認画面)
-	M -->|登録許可| N(申請許可完了画面)
-	M -->|登録拒否| N
+	A -.-> H(書籍登録申請画面)
+	H --> I(書籍登録申請確認画面)
+	I -->|書籍登録申請| J(書籍登録申請完了画面)
+	A -.-> M(書籍申請一覧画面)
+	M -->|申請一覧取得| M
+	M --> N(書籍申請確認画面)
+	N -->|書籍申請承認| O(申請許可完了画面)
+	N -->|書籍申請拒否| O
+	O --> M
+	A -.-> R(書籍貸出機能-仮)
 ```
 
