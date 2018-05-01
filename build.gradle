@@ -54,7 +54,7 @@ allprojects {
             docEncoding = defaultEncoding
             encoding = defaultEncoding
             links(
-                    "https://docs.oracle.com/javase/9/docs/api/",
+                    "https://docs.oracle.com/javase/10/docs/api/",
                     "https://docs.spring.io/spring-boot/docs/current/api/"
             )
             linkSource = true
