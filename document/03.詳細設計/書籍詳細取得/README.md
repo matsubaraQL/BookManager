@@ -23,7 +23,7 @@ sequenceDiagram
 	画面-->>Api: リクエスト送信(書籍ID)
 	
 	    loop Read
-		    Api-->>Rdb: where 書籍ID = ?
+	        Api-->>Rdb: where 書籍ID = ?
 	        Rdb-->>Api: 書籍情報
 	    end
 	
