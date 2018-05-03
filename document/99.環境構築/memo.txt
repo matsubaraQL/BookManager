@@ -2,13 +2,11 @@
 ・Github
 ・Qiita
 ・Slack
-・Skype
 ・Discord
 
 開発ツール(SP用)
 ○アプリ
 ・Slack
-・Skype
 ・Discord
 
 開発ツール(PC(Mac)用)
@@ -17,7 +15,6 @@
 
 ○アプリ
 ・Slack
-・Skype
 ・Discord
 ・VisualStudioCode
 ・Intellij IDEA
