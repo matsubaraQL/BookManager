@@ -1,0 +1,18 @@
+dependencies {
+
+    // SpringBoot projects
+    compile("org.springframework.boot:spring-boot-starter-validation") {
+        exclude group: 'org.springframework.boot', module: 'spring-boot-starter'
+        exclude group: 'org.apache.tomcat.embed', module: 'tomcat-embed-el'
+    }
+
+    // Apache Commons
+    compile("org.apache.commons:commons-lang3")
+
+}
+
+jar {
+    baseName = 'micro-test'
+    version = '1.0'
+    enabled = true
+}

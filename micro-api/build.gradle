@@ -32,9 +32,8 @@ dependencies {
     }
 
     // JDBC Drivers
-
+    runtimeOnly("org.postgresql:postgresql")
     testRuntimeOnly("com.h2database:h2")
-
 
     // SpringFox
     runtimeOnly("io.springfox:springfox-swagger-ui:$springfoxVersion")

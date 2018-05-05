@@ -1,0 +1,21 @@
+dependencies {
+
+    // SpringBoot projects
+    compile("org.springframework.boot:spring-boot-starter-validation") {
+        exclude group: 'org.springframework.boot', module: 'spring-boot-starter'
+        exclude group: 'org.apache.tomcat.embed', module: 'tomcat-embed-el'
+    }
+
+    // Doma
+    compile("org.seasar.doma.boot:doma-spring-boot-starter:${springbootDomaVersion}") {
+        exclude group: 'org.springframework.boot', module: 'spring-boot-starter'
+        exclude group: 'org.springframework.boot', module: 'spring-boot-starter-jdbc'
+    }
+
+}
+
+jar {
+    baseName = 'micro-validator'
+    version = '1.0'
+    enabled = true
+}
