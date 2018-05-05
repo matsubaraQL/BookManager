@@ -11,6 +11,9 @@ buildscript {
         jupiterVersion = jupiterVersion
         platformVersion = platformVersion
 
+        // Doma
+        springbootDomaVersion = springbootDomaVersion
+
     }
 
     repositories {
