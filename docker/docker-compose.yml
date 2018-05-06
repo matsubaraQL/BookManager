@@ -4,7 +4,7 @@ services:
 
   postgresql:
     image: postgres:10.3
-    container_name: postgres-db
+    container_name: postgresql
     ports:
       - 5432:5432
     volumes:
@@ -16,6 +16,26 @@ services:
     restart: always
     user: root
 
+  sonarqube:
+    image: sonarqube:7.1
+    container_name: sonarqube
+    depends_on:
+      - postgresql
+    volumes:
+      - sonarqube_conf:/opt/sonarqube/conf
+      - sonarqube_data:/opt/sonarqube/data
+      - sonarqube_extensions:/opt/sonarqube/extensions
+      - sonarqube_bundled-plugins:/opt/sonarqube/lib/bundled-plugins
+    command: -Dsonar.web.context=/sonar
+    ports:
+      - 9000:9000
+      - 9092:9092
+    environment:
+      - SONAR_JDBC_URL=jdbc:postgresql://localhost:5432/sonar
+    restart: always
+
 volumes:
-    database:
-      external: false
+  sonarqube_conf:
+  sonarqube_data:
+  sonarqube_extensions:
+  sonarqube_bundled-plugins:
