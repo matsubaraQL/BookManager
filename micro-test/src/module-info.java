@@ -1,0 +1,2 @@
+module micro.test.main {
+}

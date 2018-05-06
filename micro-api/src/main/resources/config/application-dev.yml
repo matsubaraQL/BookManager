@@ -21,7 +21,18 @@ spring:
 # ----------------------------------------
 # DATA PROPERTIES
 # ----------------------------------------
-
+  datasource:
+    continue-on-error: false
+    driverClassName: org.postgresql.Driver
+    generate-unique-name: false
+    jmx-enabled: true
+    password: pgtest
+    sql-script-encoding: UTF-8
+    url: jdbc:postgresql://localhost:5432/pgtest
+    username: pgtest
+  h2:
+    console:
+      enabled: false
 
 # ----------------------------------------
 # INTEGRATION PROPERTIES

@@ -17,7 +17,7 @@ dependencies {
         exclude group: 'org.springframework.boot', module: 'spring-boot-starter'
         exclude group: 'junit', module: 'junit'
     }
-    testCompile("org.springframework.restdocs:spring-restdocs-mockmvc")
+//    testCompile("org.springframework.restdocs:spring-restdocs-mockmvc")
 
     // Junit 5
     testCompile("org.junit.platform:junit-platform-launcher:${platformVersion}")
