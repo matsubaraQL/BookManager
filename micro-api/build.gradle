@@ -13,6 +13,11 @@ dependencies {
         exclude group: 'org.springframework.boot', module: 'spring-boot-starter'
     }
 
+    compile('de.codecentric:spring-boot-admin-starter-client:2.0.0') {
+    }
+    compile('de.codecentric:spring-boot-admin-starter-server:2.0.0') {
+    }
+
     // Test
     testCompile("org.springframework.boot:spring-boot-starter-test") {
         exclude group: 'org.springframework.boot', module: 'spring-boot-starter'
