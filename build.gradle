@@ -26,7 +26,7 @@ buildscript {
 }
 
 plugins {
-    id "org.springframework.boot" version "2.0.4.RELEASE"
+    id "org.springframework.boot" version "2.0.5.RELEASE"
     id "org.sonarqube" version "2.6.2"
 }
 
