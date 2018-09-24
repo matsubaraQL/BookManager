@@ -16,7 +16,6 @@ buildscript {
         // jUnit5
         jupiterVersion = jupiterVersion
         platformVersion = platformVersion
-
     }
 
     repositories {
