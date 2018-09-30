@@ -4,7 +4,6 @@ import org.springframework.boot.autoconfigure.EnableAutoConfiguration;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 import org.springframework.boot.builder.SpringApplicationBuilder;
 import org.springframework.boot.web.servlet.support.SpringBootServletInitializer;
-import springfox.documentation.swagger2.annotations.EnableSwagger2;
 
 /**
  * SpringBoot起動クラスです。
@@ -15,8 +14,6 @@ import springfox.documentation.swagger2.annotations.EnableSwagger2;
  */
 @SpringBootApplication
 @EnableAutoConfiguration
-//@Import({SpringDataRestConfiguration.class})
-@EnableSwagger2
 public class RdbApp extends SpringBootServletInitializer {
 
     /**

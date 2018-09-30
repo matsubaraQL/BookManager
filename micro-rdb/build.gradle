@@ -16,44 +16,15 @@ dependencies {
         exclude group: 'org.apache.tomcat.embed', module: 'tomcat-embed-el'
     }
 
-    // SpringFox
-    compile("io.springfox:springfox-bean-validators:${springfoxVersion}")
-    compile("io.springfox:springfox-data-rest:${springfoxVersion}")
-    compile("io.springfox:springfox-swagger2:${springfoxVersion}")
-    runtimeOnly("io.springfox:springfox-swagger-ui:$springfoxVersion")
-
     // lombok
     compileOnly("org.projectlombok:lombok")
     annotationProcessor 'org.projectlombok:lombok'
-
-    // Test
-    testCompile("org.springframework.boot:spring-boot-starter-test") {
-        exclude group: 'org.springframework.boot', module: 'spring-boot-starter'
-        exclude group: 'junit', module: 'junit'
-    }
-    testCompile("org.springframework.restdocs:spring-restdocs-mockmvc")
 
     // required jaxb
     compile("javax.xml.bind:jaxb-api")
 
     // JDBC Drivers
     runtimeOnly("org.postgresql:postgresql")
-//    testRuntimeOnly("com.h2database:h2")
-
-    // Flyway
-    testCompile("org.flywaydb.flyway-test-extensions:flyway-spring-test:5.0.0")
-    testRuntimeOnly("com.h2database:h2")
-
-    // Junit 5
-    testCompile("org.junit.platform:junit-platform-launcher:${platformVersion}")
-    testRuntimeOnly("org.junit.platform:junit-platform-engine:${platformVersion}")
-    testImplementation("org.junit.jupiter:junit-jupiter-api")
-    testImplementation("org.junit.jupiter:junit-jupiter-params:${jupiterVersion}") {
-        exclude group: 'org.junit.jupiter', module: 'junit-jupiter-api'
-    }
-    testRuntimeOnly("org.junit.jupiter:junit-jupiter-engine") {
-        exclude group: 'org.junit.jupiter', module: 'junit-jupiter-api'
-    }
 
 }
 springBoot {
@@ -69,11 +40,4 @@ jar {
     baseName = 'micro-rdb'
     version = '1.0'
     enabled = true
-}
-
-test {
-    useJUnitPlatform {
-        includeEngines 'junit-jupiter'
-    }
-    failFast = true
 }
