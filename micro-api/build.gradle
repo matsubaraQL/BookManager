@@ -5,13 +5,8 @@ dependencies {
     compile("org.springframework.boot:spring-boot-starter-actuator")
     compile("org.springframework.boot:spring-boot-starter-data-rest")
 
-    compile("de.codecentric:spring-boot-admin-starter-client:${springbootAdminVersion}")
-
     // JDBC Drivers
     runtimeOnly("org.postgresql:postgresql")
-
-    // SpringFox
-    runtimeOnly("io.springfox:springfox-swagger-ui:$springfoxVersion")
 
 }
 
