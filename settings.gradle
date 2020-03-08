@@ -1,7 +1,9 @@
 rootProject.name = 'BookManager'
 include(
+        'micro-admin',
         'micro-api',
         'micro-interfaces',
+        'micro-rdb',
         'micro-test',
         'micro-validator'
 )

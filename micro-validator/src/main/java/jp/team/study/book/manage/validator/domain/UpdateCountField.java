@@ -1,27 +1,27 @@
-package jp.team.study.book.manage.validator.constraints;
-
-import org.hibernate.validator.constraints.Length;
+package jp.team.study.book.manage.validator.domain;
 
 import javax.validation.Constraint;
 import javax.validation.Payload;
 import javax.validation.ReportAsSingleViolation;
-import javax.validation.constraints.Pattern;
 import java.lang.annotation.Documented;
 import java.lang.annotation.ElementType;
 import java.lang.annotation.Retention;
 import java.lang.annotation.RetentionPolicy;
 import java.lang.annotation.Target;
 
+/**
+ * @author uratamanabu
+ * @version 1.0
+ * @since 1.0
+ */
 @Target({ElementType.PARAMETER, ElementType.METHOD, ElementType.FIELD})
 @Retention(RetentionPolicy.RUNTIME)
 @Documented
 @Constraint(validatedBy = {})
 @ReportAsSingleViolation
-@Length(min = 13, max = 13)
-@Pattern(regexp = "[0-9\\-]{9,16}[0-9X]")
-public @interface IsbnField {
+public @interface UpdateCountField {
 
-    String message() default "Isbn is invalid";
+    String message() default "UpdateCount is invalid";
 
     Class<?>[] groups() default {};
 

@@ -1,6 +1,4 @@
-package jp.team.study.book.manage.validator.constraints;
-
-import org.hibernate.validator.constraints.Range;
+package jp.team.study.book.manage.validator.domain;
 
 import javax.validation.Constraint;
 import javax.validation.Payload;
@@ -11,15 +9,19 @@ import java.lang.annotation.Retention;
 import java.lang.annotation.RetentionPolicy;
 import java.lang.annotation.Target;
 
+/**
+ * @author uratamanabu
+ * @version 1.0
+ * @since 1.0
+ */
 @Target({ElementType.PARAMETER, ElementType.METHOD, ElementType.FIELD})
 @Retention(RetentionPolicy.RUNTIME)
 @Documented
 @Constraint(validatedBy = {})
 @ReportAsSingleViolation
-@Range(min = 0, max = 999999999)
 public @interface IdField {
 
-    String message() default "Isbn is invalid";
+    String message() default "Id is invalid";
 
     Class<?>[] groups() default {};
 

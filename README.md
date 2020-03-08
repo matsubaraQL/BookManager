@@ -9,6 +9,7 @@
     `$ docker-compose -f docker-compose.yml build`  
     `$ docker-compose -f docker-compose.yml up -d`  
 3. GradleタスクよりbootRun(`:micro-api -> Tasks -> application -> bootRun`)
+4. GradleタスクよりbootRun(`:micro-admin -> Tasks -> application -> bootRun`)
 
 ## 停止方法
 
@@ -27,13 +28,17 @@ Gradleのマルチプロジェクト構成をとっています。
 BookManager                           … rootプロジェクト
 - config                              … build.gradleから使用するTool群の設定ファイル格納フォルダ
 - docker                              … docker-compose格納フォルダ
+- - pgadmin                           … 
 - - postgres                          … 
 - - sonarqube                         … 
 - - docker-compose.yaml               … dockerコンテナ起動ファイル
 - document                            … 各種ドキュメント格納フォルダ
 - gradle                              … 
+- micro-admin                         … Adminプロジェクト
 - micro-api                           … RestApiプロジェクト
+- micro-config                        … (仮)
 - micro-interfaces                    … RestApiのI/Oを定義したプロジェクト
+- micro-rdb                           … (仮)
 - micro-test                          … Testツールを格納したプロジェクト
 - micro-validator                     … 値オブジェクトを格納したプロジェクト
 - build.gradle                        … Gradle プロジェクト定義
@@ -43,8 +48,9 @@ BookManager                           … rootプロジェクト
 
 ## Endpoints
 
+[PgAdmin][]
 [SonarQube][]  
-[BookManager][]  
+[HAL Browser][]  
 
 ## 環境
 
@@ -52,18 +58,18 @@ BookManager                           … rootプロジェクト
 
 | name              | version
 | :---------------- | :-------
-| OpenJdk           | 10
-| DockerCompose     | 1.20
-| Gradle            | 4.7 
-| SonarQube         | 7.x
+| OpenJdk           | 11
+| DockerCompose     | 1.21.2
+| Gradle            | 4.10 
+| SonarQube         | 7.1
 
 ### Library
 
 | name               | version
 | :----------------- | :------
-| SpringBoot         | 2.0.x
+| SpringBoot         | 2.1.x
 | SpringFox          | 2.x
-| Doma               | x.x
 
-[BookManager]: http://localhost:8085/swagger-ui.html     "BookManager"
+[PgAdmin]: http://localhost:80/browser/     "PgAdmin"
 [SonarQube]: http://localhost:9000/sonar/     "SonarQube"
+[HAL Browser]: http://localhost:8075/     "HAL Browser"

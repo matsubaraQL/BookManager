@@ -1,10 +1,12 @@
 package jp.team.study.book.manage.api;
 
+import jp.team.study.book.manage.rdb.RdbCore;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 import org.springframework.boot.autoconfigure.domain.EntityScan;
 import org.springframework.boot.builder.SpringApplicationBuilder;
 import org.springframework.boot.web.servlet.support.SpringBootServletInitializer;
-import springfox.documentation.swagger2.annotations.EnableSwagger2;
+import org.springframework.context.annotation.Import;
+import org.springframework.data.jpa.convert.threeten.Jsr310JpaConverters;
 
 /**
  * SpringBoot起動クラスです。
@@ -14,8 +16,8 @@ import springfox.documentation.swagger2.annotations.EnableSwagger2;
  * @since 1.0
  */
 @SpringBootApplication
-@EntityScan(basePackageClasses = {ApiApp.class})
-@EnableSwagger2
+@Import({RdbCore.class})
+@EntityScan(basePackageClasses = {ApiApp.class, Jsr310JpaConverters.class})
 public class ApiApp extends SpringBootServletInitializer {
 
     /**
